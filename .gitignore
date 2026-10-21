@@ -1,0 +1,21 @@
+# model weights and caches
+*.safetensors
+*.ckpt
+*.pt
+*.pth
+*.gguf
+*.bin
+hf_cache/
+# python
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+# bulky generated media (keep small samples by force-adding)
+pairs/*/results/raw_media/
+*.mp4
+*.mov
+# os
+Thumbs.db
+.DS_Store
