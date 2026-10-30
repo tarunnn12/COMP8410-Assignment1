@@ -29,6 +29,7 @@ pairs/*/results/renders/
 # TensorBoard logs of the nerfstudio runs (their file names carry the machine name)
 events.out.tfevents*
 # the report and the slides are submitted on iLearn, not through this repository
-report/*.docx
-report/*.pdf
-slides/*.pptx
+report/
+slides/
+# the git log is written into the submission folder by tools/make_submission.py --git-log
+docs/git_log.txt

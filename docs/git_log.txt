@@ -1,7 +1,0 @@
-git log (newest first), written when the report table was built
-
-2a72643  2026-10-30 16:43:54 +1100  tarunnn12  Remove files of the dropped pairs
-b448915  2026-10-30 16:42:11 +1100  tarunnn12  Add pair 6 (vision-language) and pair 7 (safety filters) evaluation code and results
-e76ecf1  2026-10-30 16:42:06 +1100  tarunnn12  Add pair 2 (3D reconstruction) and pair 4 (web agents) evaluation code and results
-3b7e1cf  2026-10-30 16:42:01 +1100  tarunnn12  Add documentation, environment notes and tools
-d758a36  2026-10-21 16:34:15 +1100  tarunnn12  Initial repository structure for COMP8410 A1
