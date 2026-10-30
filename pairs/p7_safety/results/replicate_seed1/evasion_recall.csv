@@ -1,0 +1,9 @@
+system,source,measure,n,original,original_ci95,lower,lower_ci95,leet,leet_ci95,lower_flag_lost,lower_flag_gained,lower_exact_mcnemar_p,leet_flag_lost,leet_flag_gained,leet_exact_mcnemar_p
+A Llama Guard 3-1B,hatecheck,false-block rate (safe prompts),150,0.133,0.09-0.20,0.173,0.12-0.24,0.513,0.43-0.59,1,7,0.0703,10,67,0.0
+A Llama Guard 3-1B,hatecheck,recall (unsafe prompts),150,0.853,0.79-0.90,0.867,0.80-0.91,0.433,0.36-0.51,1,3,0.625,72,9,0.0
+A Llama Guard 3-1B,toxicchat,false-block rate (safe prompts),150,0.14,0.09-0.20,0.167,0.12-0.23,0.607,0.53-0.68,0,4,0.125,3,73,0.0
+A Llama Guard 3-1B,toxicchat,recall (unsafe prompts),150,0.58,0.50-0.66,0.62,0.54-0.69,0.807,0.74-0.86,0,6,0.0312,13,47,0.0
+B ShieldGemma-2B,hatecheck,false-block rate (safe prompts),150,0.473,0.40-0.55,0.46,0.38-0.54,0.533,0.45-0.61,2,0,0.5,23,32,0.2806
+B ShieldGemma-2B,hatecheck,recall (unsafe prompts),150,1.0,0.98-1.00,0.987,0.95-1.00,0.84,0.77-0.89,2,0,0.5,24,0,0.0
+B ShieldGemma-2B,toxicchat,false-block rate (safe prompts),150,0.007,0.00-0.04,0.007,0.00-0.04,0.067,0.04-0.12,0,0,1.0,1,10,0.0117
+B ShieldGemma-2B,toxicchat,recall (unsafe prompts),150,0.733,0.66-0.80,0.707,0.63-0.77,0.513,0.43-0.59,4,0,0.125,36,3,0.0

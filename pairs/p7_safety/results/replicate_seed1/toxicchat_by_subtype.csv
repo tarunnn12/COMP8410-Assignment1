@@ -1,0 +1,4 @@
+subtype,n_per_system,label,A Llama Guard 3-1B,B ShieldGemma-2B
+benign,450,0,0.13,0.02
+toxic,120,1,0.59,0.83
+toxic_jailbreak,30,1,0.53,0.33

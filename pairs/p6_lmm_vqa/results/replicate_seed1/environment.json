@@ -1,0 +1,35 @@
+{
+  "date": "2026-10-23 01:13:48",
+  "python": "3.11.9",
+  "os": "Windows-10-10.0.26200-SP0",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.2",
+  "ollama_client": "0.6.1",
+  "pyarrow": "23.0.1",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "gpu_memory_total_mib": "8151",
+  "driver": "610.88",
+  "qwen_model": {
+    "qwen2.5vl:7b": {
+      "digest": "5ced39dfa4ba",
+      "size_gb": 5.56
+    }
+  },
+  "qwen3_model": {
+    "qwen3-vl:8b-instruct": {
+      "digest": "70e58e37beb1",
+      "size_gb": 5.77
+    }
+  },
+  "internvl_path": "C:/models/InternVL3-8B-hf",
+  "gen_options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 4096,
+    "num_predict": 16
+  },
+  "n_pope": 300,
+  "n_vqa_per_type": 100,
+  "n_paraphrase": 100,
+  "seed": 1
+}

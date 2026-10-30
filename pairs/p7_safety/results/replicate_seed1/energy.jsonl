@@ -1,0 +1,2 @@
+{"duration_s": 229.6, "mean_power_w": 82.9, "mean_util_pct": 65.4, "peak_mem_mib": 5703.0, "energy_wh": 5.29, "model": "llama_guard_3_1b", "prompts": 2730, "load_s": 4.4, "wall_s": 229.6, "torch_peak_alloc_gb": 3.35}
+{"duration_s": 997.0, "mean_power_w": 74.5, "mean_util_pct": 85.0, "peak_mem_mib": 7828.0, "energy_wh": 20.625, "model": "shieldgemma_2b", "prompts": 2730, "load_s": 5.7, "wall_s": 997.0, "torch_peak_alloc_gb": 6.96}

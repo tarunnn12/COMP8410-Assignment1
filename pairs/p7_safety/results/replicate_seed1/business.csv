@@ -1,0 +1,3 @@
+system,mean_latency_s,p95_latency_s,prompts,load_s,mean_power_w,peak_mem_mib,torch_peak_alloc_gb,energy_wh,prompts_in_energy_run,prompts_per_second,gpu_wh_per_1000_prompts,aud_per_million_prompts
+A Llama Guard 3-1B,0.084,0.129,2730,4.4,82.9,5703.0,3.35,5.29,2730,11.967,1.938,0.581
+B ShieldGemma-2B,0.365,0.317,2730,5.7,74.5,7828.0,6.96,20.625,2730,2.742,7.555,2.266

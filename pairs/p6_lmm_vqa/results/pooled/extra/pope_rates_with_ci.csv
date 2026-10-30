@@ -1,0 +1,4 @@
+model,hallucinated_of_absent,hallucination_rate,halluc_ci95,recall_of_present,recall,recall_ci95
+qwen3-vl-8b-instruct (ollama q4),22/281,0.078,"(0.052, 0.116)",231/281,0.822,"(0.773, 0.862)"
+qwen2.5-vl-7b (ollama q4),6/281,0.021,"(0.01, 0.046)",207/281,0.737,"(0.682, 0.785)"
+internvl3-8b (bnb nf4),38/281,0.135,"(0.1, 0.18)",246/281,0.875,"(0.832, 0.909)"

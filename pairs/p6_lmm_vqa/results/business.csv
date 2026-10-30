@@ -1,0 +1,4 @@
+model,mean_latency_s,p95_latency_s,prompt_tokens,answers,load_s,mean_power_w,peak_mem_mib,baseline_mem_mib,energy_wh,torch_peak_alloc_gb,answers_per_hour,gpu_wh_per_1000_answers,aud_per_1000_answers,extra_vram_mib
+internvl3-8b (bnb nf4),2.697,6.573,1741.286,700,21.9,65.7,7860.0,483.0,34.519,5.99,1335.063,49.313,0.015,7377.0
+qwen2.5-vl-7b (ollama q4),0.85,1.273,1091.64,700,0.0,61.0,7074.0,441.0,10.094,0.0,4234.582,14.42,0.004,6633.0
+qwen3-vl-8b-instruct (ollama q4),1.226,1.427,1080.576,700,0.0,73.3,6832.0,300.0,17.549,0.0,2935.585,25.07,0.008,6532.0

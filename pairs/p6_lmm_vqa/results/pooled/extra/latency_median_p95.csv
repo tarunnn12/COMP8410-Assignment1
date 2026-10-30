@@ -1,0 +1,4 @@
+model,n,mean_s,median_s,p95_s,mean_without_first_5,median_without_first_5,median_s_pope_original,median_s_vqa
+internvl3-8b (bnb nf4),1164,2.206,1.618,6.035,2.207,1.617,1.571,1.75
+qwen2.5-vl-7b (ollama q4),1164,0.834,1.104,1.254,0.826,1.103,0.344,1.145
+qwen3-vl-8b-instruct (ollama q4),1164,1.248,1.364,1.433,1.24,1.364,1.362,1.364

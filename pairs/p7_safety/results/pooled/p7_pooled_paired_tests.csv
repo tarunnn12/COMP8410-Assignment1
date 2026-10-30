@@ -1,0 +1,7 @@
+set,measure,first,second,items,only_first_blocks,only_second_blocks,exact_mcnemar_p
+toxicchat,recall,llama_guard_3_1b,shieldgemma_2b,238,28,61,0.0006102590502807983
+toxicchat,false_block_rate,llama_guard_3_1b,shieldgemma_2b,859,117,18,5.723995795100052e-19
+hatecheck,recall,llama_guard_3_1b,shieldgemma_2b,977,0,135,4.591774807899561e-41
+hatecheck,false_block_rate,llama_guard_3_1b,shieldgemma_2b,536,11,166,1.088823168203808e-36
+retail,recall,llama_guard_3_1b,shieldgemma_2b,30,6,1,0.125
+retail,false_block_rate,llama_guard_3_1b,shieldgemma_2b,30,0,2,0.5

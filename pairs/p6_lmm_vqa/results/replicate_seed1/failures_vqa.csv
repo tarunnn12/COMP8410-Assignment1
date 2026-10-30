@@ -1,0 +1,128 @@
+model,id,question,prediction,answer_type
+qwen2.5-vl-7b (ollama q4),vqa_526256002,Are the clocks set to the same time?,no,yes/no
+qwen2.5-vl-7b (ollama q4),vqa_1993002,Is the window open?,no,yes/no
+qwen2.5-vl-7b (ollama q4),vqa_3145002,Are there any blinds on the windows?,no,yes/no
+qwen2.5-vl-7b (ollama q4),vqa_526732001,How many crosses hang in the window?,2,number
+qwen2.5-vl-7b (ollama q4),vqa_525058012,How many windows are visible?,15,number
+qwen2.5-vl-7b (ollama q4),vqa_526536005,How many types of utensils are on the table?,2,number
+qwen2.5-vl-7b (ollama q4),vqa_524577008,What time does the clock on the building say?,12:50,number
+qwen2.5-vl-7b (ollama q4),vqa_393277005,What time is it on the clock?,7:05,number
+qwen2.5-vl-7b (ollama q4),vqa_524822016,How many reading materials are laying on the coffee table?,5,number
+qwen2.5-vl-7b (ollama q4),vqa_394157001,What time is displayed on the clock face?,10:10,number
+qwen2.5-vl-7b (ollama q4),vqa_263292001,What time does the clock indicate?,10:25,number
+qwen2.5-vl-7b (ollama q4),vqa_395405004,How many sofas are in the room?,1,number
+qwen2.5-vl-7b (ollama q4),vqa_134255002,How many windows are on the bus?,12,number
+qwen2.5-vl-7b (ollama q4),vqa_153094007,What time is it according to the clock?,10:25,number
+qwen2.5-vl-7b (ollama q4),vqa_132499001,What time is on the clock?,12:30,number
+qwen2.5-vl-7b (ollama q4),vqa_1205001,How many pillows are seen?,2,number
+qwen2.5-vl-7b (ollama q4),vqa_133195002,What time does the clock say?,12:05,number
+qwen2.5-vl-7b (ollama q4),vqa_526256000,What time does the clock read?,1:05,number
+qwen2.5-vl-7b (ollama q4),vqa_153094001,What time does it say on the clock?,10:25,number
+qwen2.5-vl-7b (ollama q4),vqa_301201001,How many books are on the shelf?,15,number
+qwen2.5-vl-7b (ollama q4),vqa_327771000,How many pillows are on the bed?,2,number
+qwen2.5-vl-7b (ollama q4),vqa_394841000,How many doorways are there?,1,number
+qwen2.5-vl-7b (ollama q4),vqa_524577003,How long until the clock says midnight?,10 hours and 52 minutes,number
+qwen2.5-vl-7b (ollama q4),vqa_527407002,What time is on the clock?,1:40,number
+qwen2.5-vl-7b (ollama q4),vqa_133051001,How many windows are there?,4,number
+qwen2.5-vl-7b (ollama q4),vqa_524577009,What time does the clock read?,12:50,number
+qwen2.5-vl-7b (ollama q4),vqa_394449000,What time is shown on the clock?,1:20,number
+qwen2.5-vl-7b (ollama q4),vqa_131431007,What time does the clock read?,12:50,number
+qwen2.5-vl-7b (ollama q4),vqa_395113003,How many windows are open on the bus?,2,number
+qwen2.5-vl-7b (ollama q4),vqa_131431006,What time does the clock say?,12:50,number
+qwen2.5-vl-7b (ollama q4),vqa_524577007,What time does the clock say?,12:50,number
+qwen2.5-vl-7b (ollama q4),vqa_524577013,What time is the clock showing?,12:05,number
+qwen2.5-vl-7b (ollama q4),vqa_393838003,Where are the green vegetables in the pan?,onions,other
+qwen2.5-vl-7b (ollama q4),vqa_134213002,Where is the clock located?,Seeley Stable Museum,other
+qwen2.5-vl-7b (ollama q4),vqa_632012,Where is the mirror?,above dresser,other
+qwen2.5-vl-7b (ollama q4),vqa_262162028,What is the size of the bed?,twin,other
+qwen2.5-vl-7b (ollama q4),vqa_524642003,What other items are on the shelf other than books?,cds,other
+qwen2.5-vl-7b (ollama q4),vqa_264032002,What color is the sink?,silver,other
+qwen2.5-vl-7b (ollama q4),vqa_262531004,What color is the couch?,There is no couch in this image.,other
+qwen2.5-vl-7b (ollama q4),vqa_327771002,What kind of pattern is on the bedding?,branch,other
+qwen2.5-vl-7b (ollama q4),vqa_524577027,What type of numbers are on the clock?,Arabic numerals,other
+qwen2.5-vl-7b (ollama q4),vqa_524577024,Where is the clock located?,wall,other
+qwen2.5-vl-7b (ollama q4),vqa_775001,What is in the rearview mirror?,billboard,other
+qwen2.5-vl-7b (ollama q4),vqa_139684002,What is in front the window on a stand?,lamp,other
+qwen2.5-vl-7b (ollama q4),vqa_396274001,How tall are these plants?,tall,other
+qwen3-vl-8b-instruct (ollama q4),vqa_264032007,Are dishes in the sink?,no,yes/no
+qwen3-vl-8b-instruct (ollama q4),vqa_264686000,How many side tables are there?,3,number
+qwen3-vl-8b-instruct (ollama q4),vqa_394133003,How many pillows are on the bed?,5,number
+qwen3-vl-8b-instruct (ollama q4),vqa_133034001,How much change is on the table?,1000 won,number
+qwen3-vl-8b-instruct (ollama q4),vqa_525058012,How many windows are visible?,14,number
+qwen3-vl-8b-instruct (ollama q4),vqa_393277005,What time is it on the clock?,7:25,number
+qwen3-vl-8b-instruct (ollama q4),vqa_394157001,What time is displayed on the clock face?,10:48,number
+qwen3-vl-8b-instruct (ollama q4),vqa_393768000,How many clocks?,4,number
+qwen3-vl-8b-instruct (ollama q4),vqa_263463000,How many doors does the car have?,2,number
+qwen3-vl-8b-instruct (ollama q4),vqa_131493003,How many blue benches are visible in this photo?,3,number
+qwen3-vl-8b-instruct (ollama q4),vqa_526806002,How many circular windows are on the train car?,5,number
+qwen3-vl-8b-instruct (ollama q4),vqa_134255002,How many windows are on the bus?,10,number
+qwen3-vl-8b-instruct (ollama q4),vqa_153094007,What time is it according to the clock?,10:15,number
+qwen3-vl-8b-instruct (ollama q4),vqa_132499001,What time is on the clock?,10:25,number
+qwen3-vl-8b-instruct (ollama q4),vqa_1205001,How many pillows are seen?,2,number
+qwen3-vl-8b-instruct (ollama q4),vqa_133195002,What time does the clock say?,12:00,number
+qwen3-vl-8b-instruct (ollama q4),vqa_526256000,What time does the clock read?,1:05,number
+qwen3-vl-8b-instruct (ollama q4),vqa_153094001,What time does it say on the clock?,10:25,number
+qwen3-vl-8b-instruct (ollama q4),vqa_1138004,How many windows do you see?,4,number
+qwen3-vl-8b-instruct (ollama q4),vqa_524577003,How long until the clock says midnight?,10 hours 57 minutes,number
+qwen3-vl-8b-instruct (ollama q4),vqa_524577009,What time does the clock read?,10:10,number
+qwen3-vl-8b-instruct (ollama q4),vqa_394449000,What time is shown on the clock?,1:05,number
+qwen3-vl-8b-instruct (ollama q4),vqa_131431007,What time does the clock read?,12:05,number
+qwen3-vl-8b-instruct (ollama q4),vqa_131431006,What time does the clock say?,12:05,number
+qwen3-vl-8b-instruct (ollama q4),vqa_524577007,What time does the clock say?,10:10,number
+qwen3-vl-8b-instruct (ollama q4),vqa_524577013,What time is the clock showing?,10:10,number
+qwen3-vl-8b-instruct (ollama q4),vqa_134213002,Where is the clock located?,seeley stable museum,other
+qwen3-vl-8b-instruct (ollama q4),vqa_632012,Where is the mirror?,above dresser,other
+qwen3-vl-8b-instruct (ollama q4),vqa_262162028,What is the size of the bed?,twin,other
+qwen3-vl-8b-instruct (ollama q4),vqa_525646004,What is the green vegetable?,arugula,other
+qwen3-vl-8b-instruct (ollama q4),vqa_524642003,What other items are on the shelf other than books?,cds,other
+qwen3-vl-8b-instruct (ollama q4),vqa_393838004,What are the white vegetables called?,onion,other
+qwen3-vl-8b-instruct (ollama q4),vqa_2212006,What is the purpose of covering the sofa with the blanket?,warmth,other
+qwen3-vl-8b-instruct (ollama q4),vqa_524577027,What type of numbers are on the clock?,roman numerals,other
+qwen3-vl-8b-instruct (ollama q4),vqa_524577024,Where is the clock located?,building,other
+qwen3-vl-8b-instruct (ollama q4),vqa_775001,What is in the rearview mirror?,billboard,other
+qwen3-vl-8b-instruct (ollama q4),vqa_394635001,What is reflection on window?,train,other
+qwen3-vl-8b-instruct (ollama q4),vqa_1149003,What is being displayed on the table?,ammunition,other
+internvl3-8b (bnb nf4),vqa_65773001,Can the man see the TV?,no,yes/no
+internvl3-8b (bnb nf4),vqa_371506000,Is there a piece of broccoli on a chair?,yes,yes/no
+internvl3-8b (bnb nf4),vqa_526732001,How many crosses hang in the window?,2,number
+internvl3-8b (bnb nf4),vqa_133034001,How much change is on the table?,.25,number
+internvl3-8b (bnb nf4),vqa_526536005,How many types of utensils are on the table?,2,number
+internvl3-8b (bnb nf4),vqa_524577008,What time does the clock on the building say?,12:05,number
+internvl3-8b (bnb nf4),vqa_393277005,What time is it on the clock?,5:05,number
+internvl3-8b (bnb nf4),vqa_394334000,How many pastries are on the left most tray on the middle shelf?,8,number
+internvl3-8b (bnb nf4),vqa_394157001,What time is displayed on the clock face?,10:09,number
+internvl3-8b (bnb nf4),vqa_985013,How many window panels are on each bus door?,3,number
+internvl3-8b (bnb nf4),vqa_263292001,What time does the clock indicate?,12:05,number
+internvl3-8b (bnb nf4),vqa_131493003,How many blue benches are visible in this photo?,3,number
+internvl3-8b (bnb nf4),vqa_526806002,How many circular windows are on the train car?,5,number
+internvl3-8b (bnb nf4),vqa_134255002,How many windows are on the bus?,12,number
+internvl3-8b (bnb nf4),vqa_153094007,What time is it according to the clock?,10:10,number
+internvl3-8b (bnb nf4),vqa_132499001,What time is on the clock?,12:00,number
+internvl3-8b (bnb nf4),vqa_1205001,How many pillows are seen?,2,number
+internvl3-8b (bnb nf4),vqa_262682013,How many ovens are in this kitchen?,2,number
+internvl3-8b (bnb nf4),vqa_133195002,What time does the clock say?,12:00,number
+internvl3-8b (bnb nf4),vqa_526256000,What time does the clock read?,12:55,number
+internvl3-8b (bnb nf4),vqa_395210002,What is the clock saying the time is?,4:22,number
+internvl3-8b (bnb nf4),vqa_153094001,What time does it say on the clock?,10:10,number
+internvl3-8b (bnb nf4),vqa_1138004,How many windows do you see?,4,number
+internvl3-8b (bnb nf4),vqa_524577003,How long until the clock says midnight?,12 hours,number
+internvl3-8b (bnb nf4),vqa_527407002,What time is on the clock?,12:22,number
+internvl3-8b (bnb nf4),vqa_524577009,What time does the clock read?,12:05,number
+internvl3-8b (bnb nf4),vqa_394449000,What time is shown on the clock?,12:15,number
+internvl3-8b (bnb nf4),vqa_131431007,What time does the clock read?,12:15,number
+internvl3-8b (bnb nf4),vqa_526555006,How many brown bottles are on the table?,2,number
+internvl3-8b (bnb nf4),vqa_131431006,What time does the clock say?,12:15,number
+internvl3-8b (bnb nf4),vqa_524577007,What time does the clock say?,12:05,number
+internvl3-8b (bnb nf4),vqa_524577013,What time is the clock showing?,12:05,number
+internvl3-8b (bnb nf4),vqa_393838003,Where are the green vegetables in the pan?,middle,other
+internvl3-8b (bnb nf4),vqa_262162028,What is the size of the bed?,twin,other
+internvl3-8b (bnb nf4),vqa_524642003,What other items are on the shelf other than books?,no,other
+internvl3-8b (bnb nf4),vqa_393838004,What are the white vegetables called?,onion,other
+internvl3-8b (bnb nf4),vqa_2212006,What is the purpose of covering the sofa with the blanket?,decoration,other
+internvl3-8b (bnb nf4),vqa_524822003,What kind of plant is in the window?,succulent,other
+internvl3-8b (bnb nf4),vqa_524577027,What type of numbers are on the clock?,roman,other
+internvl3-8b (bnb nf4),vqa_396209001,What is on the back of the chair?,tablecloth,other
+internvl3-8b (bnb nf4),vqa_775001,What is in the rearview mirror?,poster,other
+internvl3-8b (bnb nf4),vqa_569001,What color are the plants?,yellow,other
+internvl3-8b (bnb nf4),vqa_526256001,Where is the clock?,on tower,other
+internvl3-8b (bnb nf4),vqa_396274001,How tall are these plants?,6 feet,other

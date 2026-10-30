@@ -1,0 +1,31 @@
+model,id,question,prediction
+qwen2.5-vl-7b (ollama q4),pope_829,Is there a truck in the image?,Yes.
+qwen2.5-vl-7b (ollama q4),pope_907,Is there a bear in the image?,Yes.
+qwen2.5-vl-7b (ollama q4),pope_7,Is there a car in the image?,Yes.
+qwen3-vl-8b-instruct (ollama q4),pope_2929,Is there a car in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_107,Is there a bench in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2519,Is there a bicycle in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2743,Is there a couch in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_907,Is there a bear in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1055,Is there a chair in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1241,Is there an umbrella in the imange?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2175,Is there a handbag in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_7,Is there a car in the image?,Yes
+internvl3-8b (bnb nf4),pope_671,Is there a cup in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2253,Is there a cup in the image?,Yes.
+internvl3-8b (bnb nf4),pope_829,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2929,Is there a car in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2075,Is there a bicycle in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1123,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1395,Is there a backpack in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1981,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1193,Is there a cup in the image?,Yes.
+internvl3-8b (bnb nf4),pope_993,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2743,Is there a couch in the image?,Yes.
+internvl3-8b (bnb nf4),pope_907,Is there a bear in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1055,Is there a chair in the image?,Yes.
+internvl3-8b (bnb nf4),pope_161,Is there a chair in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1273,Is there a bowl in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1241,Is there an umbrella in the imange?,Yes.
+internvl3-8b (bnb nf4),pope_7,Is there a car in the image?,Yes.
+internvl3-8b (bnb nf4),pope_887,Is there a truck in the image?,Yes.

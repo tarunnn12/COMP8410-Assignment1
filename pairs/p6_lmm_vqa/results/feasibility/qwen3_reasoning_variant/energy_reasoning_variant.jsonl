@@ -1,0 +1,1 @@
+{"duration_s": 966.3, "mean_power_w": 73.8, "mean_util_pct": 68.5, "peak_mem_mib": 6798.0, "energy_wh": 19.809, "model": "qwen3-vl-8b (ollama q4)", "answers": 700, "load_s": 0.0, "wall_s": 966.3, "baseline_mem_mib": 229.0, "torch_peak_alloc_gb": 0.0}

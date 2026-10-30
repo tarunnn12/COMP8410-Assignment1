@@ -1,0 +1,25 @@
+{
+  "date": "2026-10-23 00:06:54",
+  "python": "3.11.9",
+  "os": "Windows-10-10.0.26200-SP0",
+  "torch": "2.11.0+cu128",
+  "transformers": "5.20.2",
+  "scikit-learn": "1.8.0",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "gpu_memory_total_mib": "8151",
+  "driver": "610.88",
+  "models": {
+    "A": "C:/models/Llama-Guard-3-1B",
+    "B": "C:/models/shieldgemma-2b"
+  },
+  "seed": 1,
+  "max_chars": 2000,
+  "sizes": {
+    "toxic": 120,
+    "toxic_jailbreak": 30,
+    "benign": 450,
+    "hatecheck_per_functionality": 30,
+    "evasion": 150
+  },
+  "quick": false
+}

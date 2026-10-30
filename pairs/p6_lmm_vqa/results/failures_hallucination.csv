@@ -1,0 +1,42 @@
+model,id,question,prediction
+qwen2.5-vl-7b (ollama q4),pope_109,Is there a bottle in the image?,Yes.
+qwen2.5-vl-7b (ollama q4),pope_829,Is there a truck in the image?,Yes.
+qwen2.5-vl-7b (ollama q4),pope_967,Is there a bear in the image?,Yes.
+qwen2.5-vl-7b (ollama q4),pope_557,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_109,Is there a bottle in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2823,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2759,Is there a bowl in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2987,Is there a backpack in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1013,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_929,Is there a stop sign in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2711,Is there a bus in the image?,Yes.
+internvl3-8b (bnb nf4),pope_829,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_967,Is there a bear in the image?,Yes.
+internvl3-8b (bnb nf4),pope_955,Is there a cup in the image?,Yes.
+internvl3-8b (bnb nf4),pope_557,Is there a dining table in the image?,Yes.
+internvl3-8b (bnb nf4),pope_29,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2679,Is there a sink in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1787,Is there a chair in the image?,Yes.
+internvl3-8b (bnb nf4),pope_2573,Is there a snowboard in the image?,Yes.
+internvl3-8b (bnb nf4),pope_983,Is there a cup in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1887,Is there a spoon in the image?,Yes.
+internvl3-8b (bnb nf4),pope_405,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_1239,Is there a truck in the image?,Yes.
+internvl3-8b (bnb nf4),pope_645,Is there a motorcycle in the image?,Yes.
+internvl3-8b (bnb nf4),pope_753,Is there a chair in the image?,Yes.
+qwen3-vl-8b-instruct (ollama q4),pope_109,Is there a bottle in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2519,Is there a bicycle in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2987,Is there a backpack in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1013,Is there a truck in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_913,Is there a bottle in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2915,Is there a spoon in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_967,Is there a bear in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_955,Is there a cup in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_557,Is there a dining table in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2679,Is there a sink in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1787,Is there a chair in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_107,Is there a bench in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1887,Is there a spoon in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_2175,Is there a handbag in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_1239,Is there a truck in the image?,Yes
+qwen3-vl-8b-instruct (ollama q4),pope_753,Is there a chair in the image?,Yes

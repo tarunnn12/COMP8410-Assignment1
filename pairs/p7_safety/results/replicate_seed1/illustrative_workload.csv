@@ -1,0 +1,3 @@
+system,unsafe_caught_per_day,unsafe_missed_per_day,safe_blocked_per_day,review_hours_per_day,rates_from,msgs_per_day,unsafe_share,review_seconds
+A Llama Guard 3-1B,116.0,84.0,2593.8,22.58,toxicchat,20000,0.01,30
+B ShieldGemma-2B,146.6,53.4,396.0,4.52,toxicchat,20000,0.01,30

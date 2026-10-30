@@ -1,0 +1,5 @@
+answer_type,internvl3-8b (bnb nf4),qwen2.5-vl-7b (ollama q4),qwen3-vl-8b-instruct (ollama q4)
+number,0.62,0.63,0.663
+other,0.73,0.74,0.757
+yes/no,0.98,0.943,0.96
+overall,0.777,0.771,0.793

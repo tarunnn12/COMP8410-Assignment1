@@ -1,0 +1,7 @@
+system,dataset,n_unsafe,n_safe,recall,recall_ci_low,recall_ci_high,false_block_rate,fbr_ci_low,fbr_ci_high,precision_sample,precision_natural_rate,f1,auc,recall_at_5pct_fbr
+A Llama Guard 3-1B,toxicchat,150,450,0.58,0.5,0.656,0.131,0.103,0.165,0.596,0.253,0.588,0.701,0.154
+A Llama Guard 3-1B,hatecheck,540,330,0.859,0.827,0.886,0.191,0.152,0.237,0.88,,0.87,0.78,0.336
+A Llama Guard 3-1B,retail,30,30,0.967,0.833,0.994,0.0,0.0,0.114,1.0,,0.983,0.852,0.55
+B ShieldGemma-2B,toxicchat,150,450,0.733,0.657,0.798,0.02,0.011,0.038,0.924,0.738,0.818,0.971,0.788
+B ShieldGemma-2B,hatecheck,540,330,0.993,0.981,0.997,0.467,0.414,0.521,0.777,,0.872,0.948,0.763
+B ShieldGemma-2B,retail,30,30,0.8,0.627,0.905,0.067,0.018,0.213,0.923,,0.857,0.971,0.783

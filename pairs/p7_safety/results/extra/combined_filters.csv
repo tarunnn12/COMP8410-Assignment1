@@ -1,0 +1,13 @@
+set,rule,unsafe_n,safe_n,recall,recall_ci_low,recall_ci_high,false_block_rate,fbr_ci_low,fbr_ci_high
+toxicchat,A alone,238,859,0.571,0.508,0.633,0.144,0.122,0.169
+toxicchat,B alone,238,859,0.71,0.649,0.764,0.029,0.02,0.043
+toxicchat,either flags,238,859,0.828,0.775,0.87,0.165,0.142,0.192
+toxicchat,both flag,238,859,0.454,0.392,0.517,0.008,0.004,0.017
+hatecheck,A alone,977,536,0.849,0.825,0.87,0.177,0.147,0.212
+hatecheck,B alone,977,536,0.987,0.977,0.992,0.466,0.425,0.509
+hatecheck,either flags,977,536,0.987,0.977,0.992,0.487,0.445,0.529
+hatecheck,both flag,977,536,0.849,0.825,0.87,0.157,0.128,0.19
+retail,A alone,30,30,0.967,0.833,0.994,0.0,0.0,0.114
+retail,B alone,30,30,0.8,0.627,0.905,0.067,0.018,0.213
+retail,either flags,30,30,1.0,0.886,1.0,0.067,0.018,0.213
+retail,both flag,30,30,0.767,0.591,0.882,0.0,0.0,0.114

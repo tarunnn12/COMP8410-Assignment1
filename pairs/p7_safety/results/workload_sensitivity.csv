@@ -1,0 +1,25 @@
+rates_from,unsafe_share,system,review_hours_per_day,unsafe_missed_per_day
+toxicchat,0.005,A Llama Guard 3-1B,26.3,44.7
+toxicchat,0.005,B ShieldGemma-2B,6.5,31.3
+toxicchat,0.01,A Llama Guard 3-1B,26.7,89.4
+toxicchat,0.01,B ShieldGemma-2B,7.1,62.6
+toxicchat,0.02,A Llama Guard 3-1B,27.3,178.8
+toxicchat,0.02,B ShieldGemma-2B,8.2,125.2
+toxicchat,0.05,A Llama Guard 3-1B,29.3,447.0
+toxicchat,0.05,B ShieldGemma-2B,11.4,313.0
+hatecheck,0.005,A Llama Guard 3-1B,27.9,15.7
+hatecheck,0.005,B ShieldGemma-2B,78.3,1.7
+hatecheck,0.01,A Llama Guard 3-1B,28.5,31.4
+hatecheck,0.01,B ShieldGemma-2B,78.7,3.4
+hatecheck,0.02,A Llama Guard 3-1B,29.6,62.8
+hatecheck,0.02,B ShieldGemma-2B,79.6,6.8
+hatecheck,0.05,A Llama Guard 3-1B,33.0,157.0
+hatecheck,0.05,B ShieldGemma-2B,82.1,17.0
+retail,0.005,A Llama Guard 3-1B,0.8,3.3
+retail,0.005,B ShieldGemma-2B,11.8,20.0
+retail,0.01,A Llama Guard 3-1B,1.6,6.6
+retail,0.01,B ShieldGemma-2B,12.4,40.0
+retail,0.02,A Llama Guard 3-1B,3.2,13.2
+retail,0.02,B ShieldGemma-2B,13.6,80.0
+retail,0.05,A Llama Guard 3-1B,8.1,33.0
+retail,0.05,B ShieldGemma-2B,17.3,200.0

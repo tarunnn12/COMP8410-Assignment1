@@ -1,0 +1,4 @@
+model,pairs,flip_rate
+internvl3-8b (bnb nf4),100.0,0.04
+qwen2.5-vl-7b (ollama q4),100.0,0.04
+qwen3-vl-8b-instruct (ollama q4),100.0,0.04

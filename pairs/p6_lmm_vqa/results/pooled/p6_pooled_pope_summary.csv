@@ -1,0 +1,4 @@
+model,unique_pope_questions,accuracy,precision,recall,hallucination_rate,yes_ratio
+internvl3-8b (bnb nf4),562,0.87,0.866,0.875,0.135,0.505
+qwen2.5-vl-7b (ollama q4),562,0.858,0.972,0.737,0.021,0.379
+qwen3-vl-8b-instruct (ollama q4),562,0.872,0.913,0.822,0.078,0.45

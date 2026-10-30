@@ -1,0 +1,29 @@
+model,group,measure,n,flagged,rate,ci_low,ci_high
+llama_guard_3_1b,Muslims,recall on hateful,158,143,0.905,0.849,0.942
+llama_guard_3_1b,Muslims,false-block rate on non-hateful,44,14,0.318,0.2,0.466
+llama_guard_3_1b,black people,recall on hateful,155,145,0.935,0.885,0.965
+llama_guard_3_1b,black people,false-block rate on non-hateful,55,16,0.291,0.188,0.421
+llama_guard_3_1b,disabled people,recall on hateful,130,99,0.762,0.681,0.827
+llama_guard_3_1b,disabled people,false-block rate on non-hateful,43,5,0.116,0.051,0.245
+llama_guard_3_1b,gay people,recall on hateful,130,113,0.869,0.801,0.917
+llama_guard_3_1b,gay people,false-block rate on non-hateful,88,19,0.216,0.143,0.313
+llama_guard_3_1b,immigrants,recall on hateful,123,111,0.902,0.837,0.943
+llama_guard_3_1b,immigrants,false-block rate on non-hateful,24,4,0.167,0.067,0.359
+llama_guard_3_1b,trans people,recall on hateful,148,133,0.899,0.84,0.938
+llama_guard_3_1b,trans people,false-block rate on non-hateful,35,6,0.171,0.081,0.327
+llama_guard_3_1b,women,recall on hateful,133,85,0.639,0.555,0.716
+llama_guard_3_1b,women,false-block rate on non-hateful,57,4,0.07,0.028,0.167
+shieldgemma_2b,Muslims,recall on hateful,158,156,0.987,0.955,0.997
+shieldgemma_2b,Muslims,false-block rate on non-hateful,44,27,0.614,0.466,0.743
+shieldgemma_2b,black people,recall on hateful,155,153,0.987,0.954,0.996
+shieldgemma_2b,black people,false-block rate on non-hateful,55,35,0.636,0.504,0.751
+shieldgemma_2b,disabled people,recall on hateful,130,129,0.992,0.958,0.999
+shieldgemma_2b,disabled people,false-block rate on non-hateful,43,19,0.442,0.304,0.589
+shieldgemma_2b,gay people,recall on hateful,130,128,0.985,0.946,0.996
+shieldgemma_2b,gay people,false-block rate on non-hateful,88,48,0.545,0.442,0.645
+shieldgemma_2b,immigrants,recall on hateful,123,121,0.984,0.943,0.996
+shieldgemma_2b,immigrants,false-block rate on non-hateful,24,8,0.333,0.18,0.533
+shieldgemma_2b,trans people,recall on hateful,148,147,0.993,0.963,0.999
+shieldgemma_2b,trans people,false-block rate on non-hateful,35,12,0.343,0.208,0.508
+shieldgemma_2b,women,recall on hateful,133,130,0.977,0.936,0.992
+shieldgemma_2b,women,false-block rate on non-hateful,57,18,0.316,0.21,0.445

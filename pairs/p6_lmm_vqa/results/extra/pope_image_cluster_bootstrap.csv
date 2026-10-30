@@ -1,0 +1,4 @@
+pair,accuracy_difference,ci95_low,ci95_high
+qwen3-vl-8b-instruct minus internvl3-8b,-0.01,-0.046,0.026
+qwen2.5-vl-7b minus internvl3-8b,-0.017,-0.055,0.023
+qwen3-vl-8b-instruct minus qwen2.5-vl-7b,0.007,-0.024,0.038

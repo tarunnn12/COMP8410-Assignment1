@@ -1,0 +1,29 @@
+absent-object items: 150
+qwen3-vl-8b-instruct (ollama q4) 0 / 150
+qwen3-vl-8b-instruct (ollama q4) 25 / 150
+qwen3-vl-8b-instruct (ollama q4) 50 / 150
+qwen3-vl-8b-instruct (ollama q4) 75 / 150
+qwen3-vl-8b-instruct (ollama q4) 100 / 150
+qwen3-vl-8b-instruct (ollama q4) 125 / 150
+Traceback (most recent call last):
+  File "C:\Users\verma\AppData\Roaming\Python\Python311\site-packages\transformers\models\auto\configuration_auto.py", line 1092, in from_pretrained
+    config_class = CONFIG_MAPPING[config_dict["model_type"]]
+                   ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\verma\AppData\Roaming\Python\Python311\site-packages\transformers\models\auto\configuration_auto.py", line 794, in __getitem__
+    raise KeyError(key)
+KeyError: 'internvl'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\prsnl data\vscode\adv AI\a1\COMP8410_A1\pairs\p6_lmm_vqa\results\extra\image_text_injection.py", line 64, in <module>
+    model = AutoModelForImageTextToText.from_pretrained(INTERNVL_PATH, quantization_config=q, dtype=torch.bfloat16, device_map="cuda").eval()
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\verma\AppData\Roaming\Python\Python311\site-packages\transformers\models\auto\auto_factory.py", line 526, in from_pretrained
+    config, kwargs = AutoConfig.from_pretrained(
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\verma\AppData\Roaming\Python\Python311\site-packages\transformers\models\auto\configuration_auto.py", line 1094, in from_pretrained
+    raise ValueError(
+ValueError: The checkpoint you are trying to load has model type `internvl` but Transformers does not recognize this architecture. This could be because of an issue with the checkpoint, or because your version of Transformers is out of date.
+
+You can update Transformers with the command `pip install --upgrade transformers`. If this does not work, and the checkpoint is very new, then there may not be a release version that supports this model yet. In this case, you can get the most up-to-date code by installing Transformers from source with the command `pip install git+https://github.com/huggingface/transformers.git`

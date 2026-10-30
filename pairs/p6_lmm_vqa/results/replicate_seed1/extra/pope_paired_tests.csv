@@ -1,0 +1,10 @@
+pair,subset,n,acc_first,acc_second,only_first_correct,only_second_correct,exact_mcnemar_p
+qwen3-vl-8b-instruct vs internvl3-8b,all POPE,300,0.877,0.87,13,11,0.83882
+qwen3-vl-8b-instruct vs internvl3-8b,object absent (truth no): wrong = hallucination,150,0.94,0.88,12,3,0.035156
+qwen3-vl-8b-instruct vs internvl3-8b,object present (truth yes): wrong = miss,150,0.813,0.86,1,8,0.039062
+qwen2.5-vl-7b vs internvl3-8b,all POPE,300,0.86,0.87,15,18,0.728332
+qwen2.5-vl-7b vs internvl3-8b,object absent (truth no): wrong = hallucination,150,0.98,0.88,15,0,6.1e-05
+qwen2.5-vl-7b vs internvl3-8b,object present (truth yes): wrong = miss,150,0.74,0.86,0,18,8e-06
+qwen3-vl-8b-instruct vs qwen2.5-vl-7b,all POPE,300,0.877,0.86,13,8,0.38331
+qwen3-vl-8b-instruct vs qwen2.5-vl-7b,object absent (truth no): wrong = hallucination,150,0.94,0.98,1,7,0.070312
+qwen3-vl-8b-instruct vs qwen2.5-vl-7b,object present (truth yes): wrong = miss,150,0.813,0.74,12,1,0.003418

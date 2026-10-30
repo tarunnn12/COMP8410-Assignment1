@@ -1,0 +1,4 @@
+{"duration_s": 165.8, "mean_power_w": 83.3, "mean_util_pct": 61.6, "peak_mem_mib": 4757.0, "energy_wh": 3.835, "model": "llama_guard_3_1b", "prompts": 1930, "load_s": 3.3, "wall_s": 165.8, "torch_peak_alloc_gb": 3.24}
+{"duration_s": 613.6, "mean_power_w": 78.3, "mean_util_pct": 82.7, "peak_mem_mib": 7863.0, "energy_wh": 13.341, "model": "shieldgemma_2b", "prompts": 1930, "load_s": 5.0, "wall_s": 613.6, "torch_peak_alloc_gb": 6.67}
+{"duration_s": 78.9, "mean_power_w": 87.6, "mean_util_pct": 70.1, "peak_mem_mib": 4881.0, "energy_wh": 1.921, "model": "llama_guard_3_1b", "prompts": 948, "load_s": 3.4, "wall_s": 78.9, "torch_peak_alloc_gb": 3.38}
+{"duration_s": 435.0, "mean_power_w": 69.1, "mean_util_pct": 87.7, "peak_mem_mib": 7820.0, "energy_wh": 8.351, "model": "shieldgemma_2b", "prompts": 948, "load_s": 4.0, "wall_s": 435.0, "torch_peak_alloc_gb": 6.98}

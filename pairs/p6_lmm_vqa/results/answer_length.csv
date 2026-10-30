@@ -1,0 +1,4 @@
+model,answers,mean_words,share_over_5_words,empty
+internvl3-8b (bnb nf4),700,1.017,0.0,0
+qwen2.5-vl-7b (ollama q4),700,1.04,0.0,0
+qwen3-vl-8b-instruct (ollama q4),700,1.034,0.0,0

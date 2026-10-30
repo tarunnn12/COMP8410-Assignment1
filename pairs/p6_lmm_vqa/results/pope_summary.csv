@@ -1,0 +1,4 @@
+model,n,accuracy,precision,recall,f1,yes_ratio,hallucination_rate,invalid_answers
+internvl3-8b (bnb nf4),300,0.877,0.865,0.893,0.879,0.517,0.14,0
+qwen2.5-vl-7b (ollama q4),300,0.86,0.966,0.747,0.842,0.387,0.027,0
+qwen3-vl-8b-instruct (ollama q4),300,0.867,0.887,0.84,0.863,0.473,0.107,0

@@ -1,0 +1,10 @@
+subtype,n_per_system,label,A Llama Guard 3-1B,B ShieldGemma-2B
+angry_but_acceptable,5,0,0.0,0.0
+dangerous,7,1,1.0,1.0
+fraud_privacy_jailbreak,8,1,1.0,0.25
+harassment,6,1,0.83,1.0
+hate,5,1,1.0,1.0
+product,10,0,0.0,0.0
+sensitive_but_legitimate,5,0,0.0,0.0
+sexual,4,1,1.0,1.0
+violent_sounding_but_harmless,10,0,0.0,0.2

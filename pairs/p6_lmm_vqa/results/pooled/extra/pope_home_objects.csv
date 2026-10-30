@@ -1,0 +1,37 @@
+object,model,n,absent,hallucinated,present,missed
+bed,qwen3-vl-8b-instruct (ollama q4),6,0,0,6,2
+bed,qwen2.5-vl-7b (ollama q4),6,0,0,6,2
+bed,internvl3-8b (bnb nf4),6,0,0,6,2
+book,qwen3-vl-8b-instruct (ollama q4),7,5,0,2,0
+book,qwen2.5-vl-7b (ollama q4),7,5,0,2,0
+book,internvl3-8b (bnb nf4),7,5,0,2,0
+bottle,qwen3-vl-8b-instruct (ollama q4),23,10,2,13,3
+bottle,qwen2.5-vl-7b (ollama q4),23,10,1,13,5
+bottle,internvl3-8b (bnb nf4),23,10,1,13,1
+bowl,qwen3-vl-8b-instruct (ollama q4),17,5,0,12,4
+bowl,qwen2.5-vl-7b (ollama q4),17,5,0,12,4
+bowl,internvl3-8b (bnb nf4),17,5,2,12,2
+chair,qwen3-vl-8b-instruct (ollama q4),27,21,3,6,2
+chair,qwen2.5-vl-7b (ollama q4),27,21,0,6,2
+chair,internvl3-8b (bnb nf4),27,21,4,6,1
+clock,qwen3-vl-8b-instruct (ollama q4),3,0,0,3,0
+clock,qwen2.5-vl-7b (ollama q4),3,0,0,3,1
+clock,internvl3-8b (bnb nf4),3,0,0,3,0
+couch,qwen3-vl-8b-instruct (ollama q4),17,7,1,10,0
+couch,qwen2.5-vl-7b (ollama q4),17,7,0,10,1
+couch,internvl3-8b (bnb nf4),17,7,1,10,0
+cup,qwen3-vl-8b-instruct (ollama q4),22,20,1,2,0
+cup,qwen2.5-vl-7b (ollama q4),22,20,0,2,1
+cup,internvl3-8b (bnb nf4),22,20,5,2,0
+dining table,qwen3-vl-8b-instruct (ollama q4),61,47,1,14,6
+dining table,qwen2.5-vl-7b (ollama q4),61,47,1,14,5
+dining table,internvl3-8b (bnb nf4),61,47,5,14,4
+potted plant,qwen3-vl-8b-instruct (ollama q4),3,1,0,2,0
+potted plant,qwen2.5-vl-7b (ollama q4),3,1,0,2,1
+potted plant,internvl3-8b (bnb nf4),3,1,0,2,0
+tv,qwen3-vl-8b-instruct (ollama q4),12,6,0,6,1
+tv,qwen2.5-vl-7b (ollama q4),12,6,0,6,4
+tv,internvl3-8b (bnb nf4),12,6,0,6,1
+vase,qwen3-vl-8b-instruct (ollama q4),4,2,0,2,0
+vase,qwen2.5-vl-7b (ollama q4),4,2,0,2,0
+vase,internvl3-8b (bnb nf4),4,2,0,2,0
