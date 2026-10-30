@@ -1,0 +1,3 @@
+agent,episodes,attack_followed,task_success_under_attack,task_success_clean
+text_qwen2.5-7b,30,0.467,0.533,0.8
+vlm_qwen2.5vl-7b,30,0.1,0.733,0.733

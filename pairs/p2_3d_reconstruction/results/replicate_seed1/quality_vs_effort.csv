@@ -1,0 +1,5 @@
+scene,method,iterations,train_wall_s,train_energy_wh,psnr,ssim,lpips,render_fps_median
+chair_video,nerfacto,2500,579.8,14.1,19.619,0.635,0.237,0.376
+chair_video,splatfacto,15000,199.4,3.336,24.357,0.839,0.16,346.536
+poster,nerfacto,2500,579.2,13.986,20.666,0.812,0.222,0.376
+poster,splatfacto,15000,210.7,3.646,32.769,0.958,0.047,335.408

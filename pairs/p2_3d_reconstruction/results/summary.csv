@@ -1,0 +1,5 @@
+scene,method,iterations,views,psnr,psnr_sd,ssim,lpips,render_fps,render_fps_mean,render_fps_median_after_first_view,train_wall_s,train_compute_s,sec_per_iter,train_peak_gpu_mib,eval_peak_alloc_gb,model_mb,gaussians,train_energy_wh
+chair_video,nerfacto,2500,20,19.982,2.26,0.668,0.242,0.372,0.369,0.372,582.6,568.5,0.227,3555.0,1.41,231.7,,14.137
+chair_video,splatfacto,15000,20,25.01,1.596,0.844,0.144,301.803,281.761,306.993,202.8,120.0,0.008,1237.0,0.21,181.8,255269.0,3.355
+poster,nerfacto,2500,10,20.248,3.769,0.802,0.224,0.356,0.352,0.356,582.5,569.8,0.228,3622.0,1.41,231.6,,14.099
+poster,splatfacto,15000,10,32.933,3.295,0.957,0.048,269.945,242.788,271.334,221.8,120.0,0.008,1457.0,0.21,215.5,305137.0,3.843

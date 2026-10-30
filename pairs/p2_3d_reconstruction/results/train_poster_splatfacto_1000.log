@@ -1,0 +1,1671 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+C:\envs\p2_nerf\Lib\site-packages\nerfstudio\utils\misc.py:183: RuntimeWarning: Windows does not yet support torch.compile and the performance will be affected.
+  warnings.warn(
+C:\envs\p2_nerf\Lib\site-packages\nerfstudio\field_components\activations.py:32: FutureWarning: `torch.cuda.amp.custom_fwd(args...)` is deprecated. Please use `torch.amp.custom_fwd(args..., device_type='cuda')` instead.
+  @custom_fwd(cast_inputs=torch.float32)
+C:\envs\p2_nerf\Lib\site-packages\nerfstudio\field_components\activations.py:38: FutureWarning: `torch.cuda.amp.custom_bwd(args...)` is deprecated. Please use `torch.amp.custom_bwd(args..., device_type='cuda')` instead.
+  @custom_bwd
+[11:41:09] Using --data alias for --data.pipeline.datamanager.data                                          train.py:230
+──────────────────────────────────────────────────────── Config ────────────────────────────────────────────────────────
+TrainerConfig(
+    _target=<class 'nerfstudio.engine.trainer.Trainer'>,
+    output_dir=WindowsPath('C:/prsnl data/vscode/adv AI/a1/COMP8410_A1/pairs/p2_3d_reconstruction/results/ns_runs'),
+    method_name='splatfacto',
+    experiment_name='poster_splatfacto_1000',
+    project_name='nerfstudio-project',
+    timestamp='run',
+    machine=MachineConfig(seed=42, num_devices=1, num_machines=1, machine_rank=0, dist_url='auto', device_type='cuda'),
+    logging=LoggingConfig(
+        relative_log_dir=WindowsPath('.'),
+        steps_per_log=10,
+        max_buffer_size=20,
+        local_writer=LocalWriterConfig(
+            _target=<class 'nerfstudio.utils.writer.LocalWriter'>,
+            enable=True,
+            stats_to_track=(
+                <EventName.ITER_TRAIN_TIME: 'Train Iter (time)'>,
+                <EventName.TRAIN_RAYS_PER_SEC: 'Train Rays / Sec'>,
+                <EventName.CURR_TEST_PSNR: 'Test PSNR'>,
+                <EventName.VIS_RAYS_PER_SEC: 'Vis Rays / Sec'>,
+                <EventName.TEST_RAYS_PER_SEC: 'Test Rays / Sec'>,
+                <EventName.ETA: 'ETA (time)'>
+            ),
+            max_log_size=10
+        ),
+        profiler='basic'
+    ),
+    viewer=ViewerConfig(
+        relative_log_filename='viewer_log_filename.txt',
+        websocket_port=None,
+        websocket_port_default=7007,
+        websocket_host='0.0.0.0',
+        num_rays_per_chunk=32768,
+        max_num_display_images=512,
+        quit_on_train_completion=True,
+        image_format='jpeg',
+        jpeg_quality=75,
+        make_share_url=False,
+        camera_frustum_scale=0.1,
+        default_composite_depth=True
+    ),
+    pipeline=VanillaPipelineConfig(
+        _target=<class 'nerfstudio.pipelines.base_pipeline.VanillaPipeline'>,
+        datamanager=FullImageDatamanagerConfig(
+            _target=<class 'nerfstudio.data.datamanagers.full_images_datamanager.FullImageDatamanager'>,
+            data=WindowsPath('C:/data/ns_sample/poster/transforms_subset.json'),
+            masks_on_gpu=False,
+            images_on_gpu=False,
+            dataparser=NerfstudioDataParserConfig(
+                _target=<class 'nerfstudio.data.dataparsers.nerfstudio_dataparser.Nerfstudio'>,
+                data=WindowsPath('.'),
+                scale_factor=1.0,
+                downscale_factor=4,
+                scene_scale=1.0,
+                orientation_method='up',
+                center_method='poses',
+                auto_scale_poses=True,
+                eval_mode='fraction',
+                train_split_fraction=0.9,
+                eval_interval=8,
+                depth_unit_scale_factor=0.001,
+                mask_color=None,
+                load_3D_points=True
+            ),
+            camera_res_scale_factor=1.0,
+            eval_num_images_to_sample_from=-1,
+            eval_num_times_to_repeat_images=-1,
+            eval_image_indices=(0,),
+            cache_images='gpu',
+            cache_images_type='uint8',
+            max_thread_workers=None,
+            train_cameras_sampling_strategy='random',
+            train_cameras_sampling_seed=42,
+            fps_reset_every=100
+        ),
+        model=SplatfactoModelConfig(
+            _target=<class 'nerfstudio.models.splatfacto.SplatfactoModel'>,
+            enable_collider=True,
+            collider_params={'near_plane': 2.0, 'far_plane': 6.0},
+            loss_coefficients={'rgb_loss_coarse': 1.0, 'rgb_loss_fine': 1.0},
+            eval_num_rays_per_chunk=4096,
+            prompt=None,
+            warmup_length=500,
+            refine_every=100,
+            resolution_schedule=3000,
+            background_color='random',
+            num_downscales=2,
+            cull_alpha_thresh=0.1,
+            cull_scale_thresh=0.5,
+            reset_alpha_every=30,
+            densify_grad_thresh=0.0008,
+            use_absgrad=True,
+            densify_size_thresh=0.01,
+            n_split_samples=2,
+            sh_degree_interval=1000,
+            cull_screen_size=0.15,
+            split_screen_size=0.05,
+            stop_screen_size_at=4000,
+            random_init=False,
+            num_random=50000,
+            random_scale=10.0,
+            ssim_lambda=0.2,
+            stop_split_at=15000,
+            sh_degree=3,
+            use_scale_regularization=False,
+            max_gauss_ratio=10.0,
+            output_depth_during_training=False,
+            rasterize_mode='classic',
+            camera_optimizer=CameraOptimizerConfig(
+                _target=<class 'nerfstudio.cameras.camera_optimizers.CameraOptimizer'>,
+                mode='off',
+                trans_l2_penalty=0.01,
+                rot_l2_penalty=0.001,
+                optimizer=None,
+                scheduler=None
+            ),
+            use_bilateral_grid=False,
+            grid_shape=(16, 16, 8),
+            color_corrected_metrics=False
+        )
+    ),
+    optimizers={
+        'means': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.00016,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': ExponentialDecaySchedulerConfig(
+                _target=<class 'nerfstudio.engine.schedulers.ExponentialDecayScheduler'>,
+                lr_pre_warmup=1e-08,
+                lr_final=1.6e-06,
+                warmup_steps=0,
+                max_steps=30000,
+                ramp='cosine'
+            )
+        },
+        'features_dc': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.0025,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'features_rest': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.000125,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'opacities': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.05,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'scales': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.005,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'quats': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.001,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': None
+        },
+        'camera_opt': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.0001,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': ExponentialDecaySchedulerConfig(
+                _target=<class 'nerfstudio.engine.schedulers.ExponentialDecayScheduler'>,
+                lr_pre_warmup=0,
+                lr_final=5e-07,
+                warmup_steps=1000,
+                max_steps=30000,
+                ramp='cosine'
+            )
+        },
+        'bilateral_grid': {
+            'optimizer': AdamOptimizerConfig(
+                _target=<class 'torch.optim.adam.Adam'>,
+                lr=0.002,
+                eps=1e-15,
+                max_norm=None,
+                weight_decay=0
+            ),
+            'scheduler': ExponentialDecaySchedulerConfig(
+                _target=<class 'nerfstudio.engine.schedulers.ExponentialDecayScheduler'>,
+                lr_pre_warmup=0,
+                lr_final=0.0001,
+                warmup_steps=1000,
+                max_steps=30000,
+                ramp='cosine'
+            )
+        }
+    },
+    vis='tensorboard',
+    data=WindowsPath('C:/data/ns_sample/poster/transforms_subset.json'),
+    prompt=None,
+    relative_model_dir=WindowsPath('nerfstudio_models'),
+    load_scheduler=True,
+    steps_per_save=1000,
+    steps_per_eval_batch=1000000000,
+    steps_per_eval_image=1000000000,
+    steps_per_eval_all_images=1000000000,
+    max_num_iterations=1000,
+    mixed_precision=False,
+    use_grad_scaler=False,
+    save_only_latest_checkpoint=True,
+    load_dir=None,
+    load_step=None,
+    load_config=None,
+    load_checkpoint=None,
+    log_gradients=False,
+    gradient_accumulation_steps={},
+    start_paused=False
+)
+────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+           Saving config to: C:\prsnl data\vscode\adv                                           experiment_config.py:136
+           AI\a1\COMP8410_A1\pairs\p2_3d_reconstruction\results\ns_runs\poster_splatfacto_1000\                         
+           splatfacto\run\config.yml                                                                                    
+C:\envs\p2_nerf\Lib\site-packages\nerfstudio\engine\trainer.py:137: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self.grad_scaler = GradScaler(enabled=self.use_grad_scaler)
+           Saving checkpoints to: C:\prsnl data\vscode\adv                                                trainer.py:142
+           AI\a1\COMP8410_A1\pairs\p2_3d_reconstruction\results\ns_runs\poster_splatfacto_1000\splatfacto               
+           \run\nerfstudio_models                                                                                       
+No Nerfstudio checkpoint to load, so training from scratch.
+logging events to: C:\prsnl data\vscode\adv 
+AI\a1\COMP8410_A1\pairs\p2_3d_reconstruction\results\ns_runs\poster_splatfacto_1000\splatfacto\run
+[11:41:13] Caching / undistorting train images                                            full_images_datamanager.py:230
+
+Caching / undistorting train images                                  0% -:--:--
+Caching / undistorting train images                                  0% -:--:--
+Caching / undistorting train images ---------------------------     91% 0:00:01
+Caching / undistorting train images ------------------------------ 100% 0:00:00
+Caching / undistorting train images ------------------------------ 100% 0:00:00
+
+C:\envs\p2_nerf\Lib\site-packages\nerfstudio\utils\writer.py:272: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at C:\actions-runner\_work\pytorch\pytorch\pytorch\torch\csrc\autograd\generated\python_variable_methods.cpp:837.)
+  self.write_scalar(name + "/" + key, float(scalar), step)
+[11:41:17] Printing max of 10 lines. Set flag --logging.local-writer.max-log-size=0 to disable line        writer.py:449
+           wrapping.                                                                                                    
+Step (% Done)       Train Iter (time)    ETA (time)           
+--------------------------------------------------------------
+
+[2A[1K
+Step (% Done)       Train Iter (time)    ETA (time)            [0m
+-------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s            [0m
+
+[3A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+
+[4A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+
+[5A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+
+[6A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+
+[7A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+
+[8A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+
+[9A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+
+[10A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+
+[11A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+0 (0.00%)           3 s, 417.208 ms      56 m, 57 s                                 [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+10 (1.00%)          318.283 ms           5 m, 15 s            31.23 M               [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+20 (2.00%)          7.080 ms             6 s, 938.453 ms      57.43 M               [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+30 (3.00%)          6.717 ms             6 s, 515.157 ms      65.00 M               [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+40 (4.00%)          6.812 ms             6 s, 539.818 ms      40.72 M               [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+50 (5.00%)          6.966 ms             6 s, 617.967 ms      46.22 M               [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+60 (6.00%)          8.746 ms             8 s, 220.919 ms      51.18 M               [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+70 (7.00%)          8.769 ms             8 s, 155.070 ms      46.36 M               [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+80 (8.00%)          7.979 ms             7 s, 340.384 ms      43.96 M               [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+90 (9.00%)          8.030 ms             7 s, 307.504 ms      48.10 M               [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+100 (10.00%)        8.299 ms             7 s, 469.523 ms      38.03 M               [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+110 (11.00%)        8.160 ms             7 s, 262.587 ms      17.37 M               [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+120 (12.00%)        7.806 ms             6 s, 868.863 ms      17.50 M               [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+130 (13.00%)        7.692 ms             6 s, 691.856 ms      33.44 M               [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+140 (14.00%)        7.710 ms             6 s, 630.767 ms      44.21 M               [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+150 (15.00%)        7.764 ms             6 s, 599.526 ms      43.41 M               [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+160 (16.00%)        7.950 ms             6 s, 678.117 ms      57.97 M               [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+170 (17.00%)        8.700 ms             7 s, 221.001 ms      57.40 M               [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+180 (18.00%)        8.282 ms             6 s, 791.362 ms      52.50 M               [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+190 (19.00%)        6.857 ms             5 s, 553.776 ms      68.98 M               [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+200 (20.00%)        7.905 ms             6 s, 324.253 ms      67.98 M               [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+210 (21.00%)        8.778 ms             6 s, 934.676 ms      46.85 M               [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+220 (22.00%)        8.097 ms             6 s, 315.589 ms      37.65 M               [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+230 (23.00%)        8.476 ms             6 s, 526.241 ms      37.35 M               [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+240 (24.00%)        8.716 ms             6 s, 623.987 ms      26.68 M               [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+250 (25.00%)        8.829 ms             6 s, 621.793 ms      15.96 M               [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+260 (26.00%)        8.759 ms             6 s, 481.861 ms      15.57 M               [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+270 (27.00%)        8.101 ms             5 s, 913.572 ms      16.58 M               [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+280 (28.00%)        7.160 ms             5 s, 154.862 ms      18.57 M               [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+290 (29.00%)        7.201 ms             5 s, 112.620 ms      18.69 M               [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+300 (30.00%)        7.780 ms             5 s, 445.786 ms      27.81 M               [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+310 (31.00%)        7.758 ms             5 s, 352.944 ms      53.41 M               [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+320 (32.00%)        7.889 ms             5 s, 364.566 ms      58.37 M               [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+330 (33.00%)        8.749 ms             5 s, 862.131 ms      47.14 M               [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+340 (34.00%)        8.724 ms             5 s, 758.083 ms      52.44 M               [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+350 (35.00%)        6.499 ms             4 s, 224.601 ms      75.64 M               [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+360 (36.00%)        7.565 ms             4 s, 841.461 ms      69.06 M               [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+370 (37.00%)        9.479 ms             5 s, 971.574 ms      46.28 M               [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+380 (38.00%)        9.083 ms             5 s, 631.628 ms      46.78 M               [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+390 (39.00%)        9.357 ms             5 s, 708.010 ms      31.42 M               [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+400 (40.00%)        9.659 ms             5 s, 795.181 ms      14.90 M               [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+410 (41.00%)        9.299 ms             5 s, 486.321 ms      14.85 M               [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+420 (42.00%)        9.222 ms             5 s, 348.598 ms      15.05 M               [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+430 (43.00%)        8.431 ms             4 s, 805.809 ms      16.36 M               [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+440 (44.00%)        7.610 ms             4 s, 261.580 ms      17.68 M               [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+450 (45.00%)        9.359 ms             5 s, 147.261 ms      30.80 M               [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+460 (46.00%)        7.730 ms             4 s, 174.101 ms      64.07 M               [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+470 (47.00%)        6.884 ms             3 s, 648.300 ms      70.03 M               [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+480 (48.00%)        8.710 ms             4 s, 528.954 ms      57.60 M               [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+490 (49.00%)        9.471 ms             4 s, 830.106 ms      41.58 M               [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+500 (50.00%)        9.246 ms             4 s, 622.996 ms      41.56 M               [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+Step 600: 191 GSs duplicated, 6765 GSs split. Now having 19933 GSs.
+Step 600: 9829 GSs pruned. Now having 10104 GSs.
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+510 (51.00%)        8.711 ms             4 s, 268.538 ms      36.56 M               [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+520 (52.00%)        8.669 ms             4 s, 161.175 ms      15.87 M               [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+530 (53.00%)        8.023 ms             3 s, 771.000 ms      16.78 M               [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+540 (54.00%)        8.599 ms             3 s, 955.406 ms      15.64 M               [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+550 (55.00%)        9.005 ms             4 s, 52.115 ms       15.06 M               [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+560 (56.00%)        8.143 ms             3 s, 583.049 ms      17.67 M               [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+570 (57.00%)        7.280 ms             3 s, 130.427 ms      44.50 M               [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+580 (58.00%)        8.364 ms             3 s, 512.889 ms      62.79 M               [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+590 (59.00%)        8.752 ms             3 s, 588.452 ms      52.87 M               [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+600 (60.00%)        8.789 ms             3 s, 515.429 ms      58.80 M               [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+Step 700: 531 GSs duplicated, 5688 GSs split. Now having 16323 GSs.
+Step 700: 1363 GSs pruned. Now having 14960 GSs.
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+610 (61.00%)        9.605 ms             3 s, 745.997 ms      57.18 M               [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+620 (62.00%)        8.118 ms             3 s, 84.893 ms       59.81 M               [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+630 (63.00%)        6.594 ms             2 s, 439.732 ms      71.91 M               [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+640 (64.00%)        6.443 ms             2 s, 319.536 ms      58.10 M               [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+650 (65.00%)        7.687 ms             2 s, 690.536 ms      42.89 M               [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+660 (66.00%)        8.619 ms             2 s, 930.387 ms      38.95 M               [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+670 (67.00%)        8.236 ms             2 s, 717.735 ms      27.47 M               [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+680 (68.00%)        8.635 ms             2 s, 763.176 ms      16.05 M               [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+690 (69.00%)        8.451 ms             2 s, 619.743 ms      32.49 M               [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+700 (70.00%)        8.773 ms             2 s, 631.966 ms      53.09 M               [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+Step 800: 855 GSs duplicated, 6955 GSs split. Now having 22770 GSs.
+Step 800: 1717 GSs pruned. Now having 21053 GSs.
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+710 (71.00%)        9.547 ms             2 s, 768.698 ms      41.20 M               [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+720 (72.00%)        8.715 ms             2 s, 440.229 ms      43.32 M               [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+730 (73.00%)        7.961 ms             2 s, 149.499 ms      64.67 M               [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+740 (74.00%)        9.094 ms             2 s, 364.428 ms      57.36 M               [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+750 (75.00%)        9.570 ms             2 s, 392.542 ms      42.40 M               [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+760 (76.00%)        9.335 ms             2 s, 240.464 ms      26.14 M               [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+770 (77.00%)        9.621 ms             2 s, 212.929 ms      14.08 M               [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+780 (78.00%)        9.636 ms             2 s, 119.938 ms      14.33 M               [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+790 (79.00%)        9.558 ms             2 s, 7.150 ms        14.23 M               [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+800 (80.00%)        9.322 ms             1 s, 864.369 ms      14.57 M               [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+Step 900: 1071 GSs duplicated, 8231 GSs split. Now having 30355 GSs.
+Step 900: 2179 GSs pruned. Now having 28176 GSs.
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+810 (81.00%)        8.879 ms             1 s, 686.950 ms      15.26 M               [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+820 (82.00%)        8.060 ms             1 s, 450.762 ms      17.02 M               [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+830 (83.00%)        7.756 ms             1 s, 318.460 ms      18.28 M               [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+840 (84.00%)        7.771 ms             1 s, 243.326 ms      17.87 M               [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+850 (85.00%)        8.477 ms             1 s, 271.596 ms      15.85 M               [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+860 (86.00%)        9.097 ms             1 s, 273.631 ms      14.93 M               [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+870 (87.00%)        8.664 ms             1 s, 126.264 ms      15.91 M               [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+960 (96.00%)        9.532 ms             381.278 ms           15.49 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+880 (88.00%)        7.939 ms             952.623 ms           16.97 M               [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+960 (96.00%)        9.532 ms             381.278 ms           15.49 M               [0m
+970 (97.00%)        9.973 ms             299.198 ms           13.77 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+890 (89.00%)        8.192 ms             901.136 ms           16.76 M               [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+960 (96.00%)        9.532 ms             381.278 ms           15.49 M               [0m
+970 (97.00%)        9.973 ms             299.198 ms           13.77 M               [0m
+980 (98.00%)        9.129 ms             182.584 ms           15.31 M               [0m
+
+[12A[1K
+Step (% Done)       Train Iter (time)    ETA (time)           Train Rays / Sec      [0m
+----------------------------------------------------------------------------------- [0m
+900 (90.00%)        9.207 ms             920.690 ms           15.20 M               [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+960 (96.00%)        9.532 ms             381.278 ms           15.49 M               [0m
+970 (97.00%)        9.973 ms             299.198 ms           13.77 M               [0m
+980 (98.00%)        9.129 ms             182.584 ms           15.31 M               [0m
+990 (99.00%)        8.657 ms             86.567 ms            16.34 M               [0m
+
+[12A[1K
+Step (% Done)                                                                       [0m
+--------------------                                                                [0m
+910 (91.00%)        9.501 ms             855.110 ms           14.51 M               [0m
+920 (92.00%)        9.740 ms             779.219 ms           13.94 M               [0m
+930 (93.00%)        9.890 ms             692.331 ms           13.57 M               [0m
+940 (94.00%)        9.382 ms             562.928 ms           14.56 M               [0m
+950 (95.00%)        8.772 ms             438.625 ms           16.70 M               [0m
+960 (96.00%)        9.532 ms             381.278 ms           15.49 M               [0m
+970 (97.00%)        9.973 ms             299.198 ms           13.77 M               [0m
+980 (98.00%)        9.129 ms             182.584 ms           15.31 M               [0m
+990 (99.00%)        8.657 ms             86.567 ms            16.34 M               [0m
+999 (99.90%)                                                                        [0m
+┌────────────────────────────────────────────── 🎉 Training Finished 🎉 ───────────────────────────────────────────────┐
+│                        ╷                                                                                             │
+│   Config File          │ C:\prsnl data\vscode\adv                                                                    │
+│                        │ AI\a1\COMP8410_A1\pairs\p2_3d_reconstruction\results\ns_runs\poster_splatfacto_1000\spla…   │
+│   Checkpoint Directory │ C:\prsnl data\vscode\adv                                                                    │
+│                        │ AI\a1\COMP8410_A1\pairs\p2_3d_reconstruction\results\ns_runs\poster_splatfacto_1000\spla…   │
+│                        ╵                                                                                             │
+└──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────┘
+Printing profiling stats, from longest to shortest duration in seconds
+Trainer.train_iteration: 0.0108              
+VanillaPipeline.get_train_loss_dict: 0.0074              
+Trainer.eval_iteration: 0.0000              

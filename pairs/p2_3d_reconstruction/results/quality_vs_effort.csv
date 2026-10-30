@@ -1,0 +1,15 @@
+scene,method,iterations,train_wall_s,train_energy_wh,psnr,ssim,lpips,render_fps_median
+chair_video,nerfacto,2500,582.6,14.137,19.982,0.668,0.242,0.372
+chair_video,nerfacto,5000,1087.8,26.548,19.788,0.662,0.179,0.373
+chair_video,nerfacto,10000,2051.9,50.224,19.674,0.643,0.157,0.372
+chair_video,splatfacto,1000,23.7,0.141,21.689,0.741,0.272,485.963
+chair_video,splatfacto,3000,43.2,0.407,20.097,0.595,0.396,335.595
+chair_video,splatfacto,7000,92.7,1.248,24.822,0.857,0.149,341.838
+chair_video,splatfacto,15000,202.8,3.355,25.01,0.844,0.144,301.803
+poster,nerfacto,2500,582.5,14.099,20.248,0.802,0.224,0.356
+poster,nerfacto,5000,1088.9,26.506,20.337,0.811,0.186,0.374
+poster,nerfacto,10000,2060.1,50.108,20.069,0.816,0.149,0.375
+poster,splatfacto,1000,24.8,0.148,21.843,0.766,0.288,412.177
+poster,splatfacto,3000,47.7,0.445,19.496,0.622,0.394,318.292
+poster,splatfacto,7000,105.5,1.455,30.99,0.953,0.057,294.08
+poster,splatfacto,15000,221.8,3.843,32.933,0.957,0.048,269.945

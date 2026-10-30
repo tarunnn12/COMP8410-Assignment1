@@ -1,0 +1,5 @@
+scene,method,psnr_mean,psnr_min,psnr_max,ssim_mean,ssim_min,ssim_max,lpips_mean,lpips_min,lpips_max,render_fps_mean,render_fps_min,render_fps_max,train_wall_s_mean,train_wall_s_min,train_wall_s_max
+chair_video,nerfacto,19.8,19.619,19.982,0.652,0.635,0.668,0.24,0.237,0.242,0.374,0.372,0.376,581.2,579.8,582.6
+chair_video,splatfacto,24.684,24.357,25.01,0.841,0.839,0.844,0.152,0.144,0.16,324.17,301.803,346.536,201.1,199.4,202.8
+poster,nerfacto,20.457,20.248,20.666,0.807,0.802,0.812,0.223,0.222,0.224,0.366,0.356,0.376,580.85,579.2,582.5
+poster,splatfacto,32.851,32.769,32.933,0.958,0.957,0.958,0.048,0.047,0.048,302.677,269.945,335.408,216.25,210.7,221.8

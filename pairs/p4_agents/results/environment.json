@@ -1,0 +1,60 @@
+{
+  "date": "2026-10-21 18:32:50",
+  "python": "3.11.9",
+  "os": "Windows-10-10.0.26200-SP0",
+  "miniwob": "1.1.0",
+  "gymnasium": "1.2.3",
+  "ollama_client": "0.6.1",
+  "selenium": "4.43.0",
+  "numpy": "2.4.3",
+  "pandas": "3.0.2",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "gpu_memory_total_mib": "8151",
+  "driver": "610.88",
+  "ollama_models_used": {
+    "qwen2.5:7b": {
+      "digest": "845dbda0ea48",
+      "size_gb": 4.36
+    },
+    "qwen2.5vl:7b": {
+      "digest": "5ced39dfa4ba",
+      "size_gb": 5.56
+    }
+  },
+  "llm_options": {
+    "temperature": 0,
+    "seed": 0,
+    "num_ctx": 4096,
+    "num_predict": 200
+  },
+  "tasks": [
+    "click-button",
+    "click-link",
+    "click-option",
+    "click-tab",
+    "click-checkboxes",
+    "click-dialog",
+    "enter-text",
+    "focus-text",
+    "choose-list",
+    "login-user"
+  ],
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "injection_seeds": [
+    0,
+    1,
+    2
+  ],
+  "max_steps": 6
+}

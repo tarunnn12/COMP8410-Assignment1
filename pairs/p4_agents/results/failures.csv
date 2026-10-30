@@ -1,0 +1,125 @@
+agent,task,seed,failure_type,steps,invalid_actions
+random,click-button,3,episode ended with no reward,2,0
+random,click-button,4,episode ended with no reward,1,0
+random,click-button,5,episode ended with no reward,1,0
+random,click-button,6,episode ended with no reward,1,0
+random,click-button,7,step limit reached,6,0
+random,click-button,8,episode ended with no reward,2,0
+random,click-button,9,episode ended with no reward,1,0
+random,click-link,0,episode ended with no reward,1,0
+random,click-link,1,episode ended with no reward,1,0
+random,click-link,2,episode ended with no reward,1,0
+random,click-link,4,episode ended with no reward,1,0
+random,click-link,5,episode ended with no reward,1,0
+random,click-link,6,episode ended with no reward,1,0
+random,click-link,7,episode ended with no reward,1,0
+random,click-link,9,episode ended with no reward,1,0
+random,click-option,1,episode ended with no reward,2,0
+random,click-option,2,episode ended with no reward,4,0
+random,click-option,3,episode ended with no reward,2,0
+random,click-option,4,step limit reached,6,0
+random,click-option,5,episode ended with no reward,6,0
+random,click-option,6,step limit reached,6,0
+random,click-option,7,step limit reached,6,0
+random,click-option,8,step limit reached,6,0
+random,click-option,9,step limit reached,6,0
+random,click-tab,0,episode ended with no reward,4,0
+random,click-tab,1,episode ended with no reward,2,0
+random,click-tab,3,episode ended with no reward,2,0
+random,click-tab,4,episode ended with no reward,1,0
+random,click-tab,5,episode ended with no reward,1,0
+random,click-tab,6,episode ended with no reward,1,0
+random,click-tab,7,episode ended with no reward,2,0
+random,click-tab,8,episode ended with no reward,3,0
+random,click-checkboxes,0,episode ended with no reward,1,0
+random,click-checkboxes,1,episode ended with no reward,4,0
+random,click-checkboxes,2,episode ended with no reward,4,0
+random,click-checkboxes,3,step limit reached,6,0
+random,click-checkboxes,4,step limit reached,6,0
+random,click-checkboxes,6,episode ended with no reward,1,0
+random,click-checkboxes,7,episode ended with no reward,2,0
+random,click-checkboxes,8,step limit reached,6,0
+random,click-checkboxes,9,episode ended with no reward,2,0
+random,click-dialog,1,step limit reached,6,0
+random,click-dialog,3,step limit reached,6,0
+random,click-dialog,5,step limit reached,6,0
+random,click-dialog,6,step limit reached,6,0
+random,click-dialog,7,step limit reached,6,0
+random,click-dialog,9,step limit reached,6,0
+random,enter-text,0,episode ended with no reward,4,0
+random,enter-text,1,episode ended with no reward,1,0
+random,enter-text,2,episode ended with no reward,2,0
+random,enter-text,3,episode ended with no reward,3,0
+random,enter-text,4,episode ended with no reward,1,0
+random,enter-text,5,episode ended with no reward,1,0
+random,enter-text,6,episode ended with no reward,2,0
+random,enter-text,7,episode ended with no reward,4,0
+random,enter-text,8,episode ended with no reward,1,0
+random,enter-text,9,episode ended with no reward,1,0
+random,choose-list,0,episode ended with no reward,1,0
+random,choose-list,1,episode ended with no reward,1,0
+random,choose-list,2,episode ended with no reward,1,0
+random,choose-list,3,step limit reached,6,0
+random,choose-list,4,episode ended with no reward,4,0
+random,choose-list,5,episode ended with no reward,1,0
+random,choose-list,6,episode ended with no reward,1,0
+random,choose-list,7,episode ended with no reward,3,0
+random,choose-list,8,episode ended with no reward,1,0
+random,choose-list,9,episode ended with no reward,1,0
+random,login-user,0,step limit reached,6,0
+random,login-user,1,episode ended with no reward,4,0
+random,login-user,2,episode ended with no reward,1,0
+random,login-user,3,step limit reached,6,0
+random,login-user,4,step limit reached,6,0
+random,login-user,5,episode ended with no reward,5,0
+random,login-user,6,episode ended with no reward,3,0
+random,login-user,7,step limit reached,6,0
+random,login-user,8,episode ended with no reward,2,0
+random,login-user,9,episode ended with no reward,1,0
+text_qwen2.5-7b,click-option,0,step limit reached,6,1
+text_qwen2.5-7b,click-option,1,step limit reached,6,2
+text_qwen2.5-7b,click-option,2,invalid or unparsable actions,6,3
+text_qwen2.5-7b,click-option,3,step limit reached,6,0
+text_qwen2.5-7b,click-option,5,step limit reached,6,0
+text_qwen2.5-7b,click-option,6,step limit reached,6,0
+text_qwen2.5-7b,click-option,7,invalid or unparsable actions,6,3
+text_qwen2.5-7b,click-option,8,step limit reached,6,0
+text_qwen2.5-7b,click-option,9,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,0,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,1,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,2,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,3,episode ended with no reward,1,0
+text_qwen2.5-7b,click-checkboxes,5,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,6,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,7,step limit reached,6,2
+text_qwen2.5-7b,click-checkboxes,8,step limit reached,6,0
+text_qwen2.5-7b,click-checkboxes,9,episode ended with no reward,3,0
+text_qwen2.5-7b,choose-list,1,step limit reached,6,0
+text_qwen2.5-7b,choose-list,3,invalid or unparsable actions,6,4
+vlm_qwen2.5vl-7b,click-link,5,invalid or unparsable actions,6,4
+vlm_qwen2.5vl-7b,click-option,0,episode ended with no reward,1,0
+vlm_qwen2.5vl-7b,click-option,8,invalid or unparsable actions,3,1
+vlm_qwen2.5vl-7b,click-checkboxes,2,invalid or unparsable actions,6,4
+vlm_qwen2.5vl-7b,click-checkboxes,3,invalid or unparsable actions,6,5
+vlm_qwen2.5vl-7b,click-checkboxes,9,invalid or unparsable actions,6,4
+vlm_qwen2.5vl-7b,enter-text,3,step limit reached,6,2
+vlm_qwen2.5vl-7b,enter-text,5,step limit reached,6,2
+vlm_qwen2.5vl-7b,choose-list,0,step limit reached,6,1
+vlm_qwen2.5vl-7b,choose-list,1,episode ended with no reward,1,0
+vlm_qwen2.5vl-7b,choose-list,2,invalid or unparsable actions,6,5
+vlm_qwen2.5vl-7b,choose-list,4,step limit reached,6,0
+vlm_qwen2.5vl-7b,choose-list,5,step limit reached,6,2
+vlm_qwen2.5vl-7b,choose-list,6,episode ended with no reward,2,0
+vlm_qwen2.5vl-7b,choose-list,7,invalid or unparsable actions,3,1
+vlm_qwen2.5vl-7b,choose-list,8,episode ended with no reward,1,0
+vlm_qwen2.5vl-7b,choose-list,9,invalid or unparsable actions,3,1
+vlm_qwen2.5vl-7b,login-user,0,step limit reached,6,1
+vlm_qwen2.5vl-7b,login-user,1,episode ended with no reward,5,0
+vlm_qwen2.5vl-7b,login-user,2,episode ended with no reward,5,0
+vlm_qwen2.5vl-7b,login-user,3,episode ended with no reward,5,0
+vlm_qwen2.5vl-7b,login-user,4,step limit reached,6,1
+vlm_qwen2.5vl-7b,login-user,5,episode ended with no reward,5,0
+vlm_qwen2.5vl-7b,login-user,6,invalid or unparsable actions,6,3
+vlm_qwen2.5vl-7b,login-user,7,step limit reached,6,2
+vlm_qwen2.5vl-7b,login-user,8,step limit reached,6,1
+vlm_qwen2.5vl-7b,login-user,9,episode ended with no reward,5,0

@@ -1,0 +1,4 @@
+agent,sec_per_task,tasks_per_hour,gpu_wh_per_task,aud_per_1000_tasks,aud_per_1000_successes
+random,0.157,22995.848,0.002,0.001,0.002
+text_qwen2.5-7b,1.578,2282.049,0.036,0.011,0.014
+vlm_qwen2.5vl-7b,8.968,401.425,0.213,0.064,0.089

@@ -1,0 +1,10 @@
+chair_video_splatfacto_1000: step 999, gaussians 27833, mean opacity 0.487, median 0.396, share above 0.2: 0.724
+chair_video_splatfacto_3000: step 2999, gaussians 194757, mean opacity 0.874, median 1.000, share above 0.2: 0.933
+chair_video_splatfacto_7000: step 6999, gaussians 264782, mean opacity 0.868, median 1.000, share above 0.2: 0.946
+chair_video_splatfacto: step 14999, gaussians 255269, mean opacity 0.884, median 1.000, share above 0.2: 0.957
+poster_splatfacto_1000: step 999, gaussians 28176, mean opacity 0.598, median 0.640, share above 0.2: 0.796
+poster_splatfacto_3000: step 2999, gaussians 217877, mean opacity 0.853, median 1.000, share above 0.2: 0.929
+poster_splatfacto_7000: step 6999, gaussians 277334, mean opacity 0.874, median 1.000, share above 0.2: 0.959
+poster_splatfacto: step 14999, gaussians 305137, mean opacity 0.895, median 1.000, share above 0.2: 0.969
+reset condition true for any step in 0..30000: False
+gsplat file: C:\envs\p2_nerf\Lib\site-packages\gsplat\__init__.py

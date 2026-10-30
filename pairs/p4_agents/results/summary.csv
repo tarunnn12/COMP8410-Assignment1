@@ -1,0 +1,4 @@
+agent,episodes,success_rate,ci95_low,ci95_high,mean_steps,invalid_action_rate,llm_s_per_episode,wall_s_per_episode,prompt_tokens,completion_tokens
+random,100,0.23,0.158,0.322,2.8,0.0,0.0,0.162,0.0,0.0
+text_qwen2.5-7b,100,0.8,0.711,0.867,2.61,0.08,1.525,1.649,1373.95,62.21
+vlm_qwen2.5vl-7b,100,0.73,0.636,0.807,2.68,0.201,12.395,12.571,8054.45,99.71

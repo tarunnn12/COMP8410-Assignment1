@@ -1,0 +1,5 @@
+{"duration_s": 49.4, "mean_power_w": 13.0, "mean_util_pct": 1.9, "peak_mem_mib": 7562.0, "energy_wh": 0.178, "agent": "random", "phase": "main", "episodes": 100, "wall_s": 49.4}
+{"duration_s": 190.1, "mean_power_w": 68.0, "mean_util_pct": 53.0, "peak_mem_mib": 7562.0, "energy_wh": 3.592, "agent": "text_qwen2.5-7b", "phase": "main", "episodes": 100, "wall_s": 190.1}
+{"duration_s": 929.6, "mean_power_w": 82.6, "mean_util_pct": 75.7, "peak_mem_mib": 7606.0, "energy_wh": 21.323, "agent": "vlm_qwen2.5vl-7b", "phase": "main", "episodes": 100, "wall_s": 929.6}
+{"duration_s": 87.1, "mean_power_w": 52.7, "mean_util_pct": 41.5, "peak_mem_mib": 7532.0, "energy_wh": 1.274, "agent": "text_qwen2.5-7b", "phase": "injection", "episodes": 30, "wall_s": 87.1}
+{"duration_s": 328.6, "mean_power_w": 78.1, "mean_util_pct": 71.7, "peak_mem_mib": 7635.0, "energy_wh": 7.133, "agent": "vlm_qwen2.5vl-7b", "phase": "injection", "episodes": 30, "wall_s": 328.6}

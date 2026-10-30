@@ -1,0 +1,2 @@
+tasks_text_better,tasks_vlm_better,tasks_tied,mean_diff,boot_low,boot_high
+4,2,4,0.07,-0.23,0.36

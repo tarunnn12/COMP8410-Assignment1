@@ -1,0 +1,11 @@
+task,random,text_qwen2.5-7b,vlm_qwen2.5vl-7b
+choose-list,0.0,0.8,0.1
+click-button,0.3,1.0,1.0
+click-checkboxes,0.1,0.1,0.7
+click-dialog,0.4,1.0,1.0
+click-link,0.2,1.0,0.9
+click-option,0.1,0.1,0.8
+click-tab,0.2,1.0,1.0
+enter-text,0.0,1.0,0.8
+focus-text,1.0,1.0,1.0
+login-user,0.0,1.0,0.0

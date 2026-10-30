@@ -1,0 +1,5 @@
+scene,method,train_wall_s,train_energy_wh,render_fps,model_mb,gaussians,aud_per_scene_energy,interactive_30fps
+chair_video,nerfacto,582.6,14.137,0.372,231.7,,0.0042,False
+chair_video,splatfacto,202.8,3.355,301.803,181.8,255269.0,0.001,True
+poster,nerfacto,582.5,14.099,0.356,231.6,,0.0042,False
+poster,splatfacto,221.8,3.843,269.945,215.5,305137.0,0.0012,True

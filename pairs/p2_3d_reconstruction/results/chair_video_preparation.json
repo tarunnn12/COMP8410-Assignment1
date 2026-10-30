@@ -1,0 +1,60 @@
+{
+ "source_videos": {
+  "chair_orbit_low.mp4": {
+   "seconds": 41.6,
+   "width": 1280,
+   "height": 720,
+   "fps": 30,
+   "codec": "hevc",
+   "role": "training views (low circle)"
+  },
+  "chair_orbit_high.mp4": {
+   "seconds": 33.7,
+   "width": 1280,
+   "height": 720,
+   "fps": 30,
+   "codec": "hevc",
+   "role": "test views (higher circle)"
+  }
+ },
+ "frames_extracted": {
+  "train": 104,
+  "eval": 84,
+  "total": 188,
+  "fps": 2.5,
+  "size": "960x540"
+ },
+ "blur_filter": {
+  "measure": "variance of the Laplacian",
+  "threshold": 45,
+  "dropped": [
+   "train_0095",
+   "train_0096",
+   "train_0097",
+   "eval_0046",
+   "eval_0047",
+   "eval_0048"
+  ],
+  "kept": 182,
+  "train_kept": 101,
+  "eval_kept": 81
+ },
+ "colmap": {
+  "version": "4.2.1 (CUDA build, run on the CPU)",
+  "camera_model": "OPENCV, single camera",
+  "matching": "exhaustive",
+  "minutes": {
+   "feature_extraction": 0.069,
+   "matching": 1.652,
+   "mapping": 0.898
+  },
+  "model_used": "sparse/1 (the mapper wrote two models; sparse/0 had 2 images)",
+  "registered_images": 182,
+  "points": 16914,
+  "mean_track_length": 11.04,
+  "mean_observations_per_image": 1026.1,
+  "mean_reprojection_error_px": 0.584
+ },
+ "training_images": "images_2 (480 x 270), nerfstudio-data parser, eval split by file name (train_* for training, eval_* for testing)",
+ "log": "feasibility/chair_video/colmap_log.txt"
+}

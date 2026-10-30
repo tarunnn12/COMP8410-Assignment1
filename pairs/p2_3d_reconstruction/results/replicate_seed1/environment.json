@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-27 19:21:53",
+  "python": "3.11.9",
+  "os": "Windows-10-10.0.26300-SP0",
+  "venv_packages": "{'nerfstudio': '1.1.5', 'gsplat': '1.5.3', 'nerfacc': '0.5.2', 'torch': '2.11.0+cu128', 'numpy': '1.26.4'}",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "gpu_memory_total_mib": "8151",
+  "driver": "610.88",
+  "scenes": {
+    "chair_video": "C:\\data\\chair_video\\ns\\transforms.json",
+    "poster": "C:\\data\\ns_sample\\poster\\transforms_subset.json"
+  },
+  "iterations": {
+    "nerfacto": 2500,
+    "splatfacto": 15000
+  },
+  "eval_views": 20,
+  "quick": false
+}

@@ -1,0 +1,17 @@
+'vswhere.exe' is not recognized as an internal or external command,
+operable program or batch file.
+**********************************************************************
+** Visual Studio 2022 Developer Command Prompt v17.0
+** Copyright (c) 2025 Microsoft Corporation
+**********************************************************************
+[vcvarsall.bat] Environment initialized for: 'x64'
+=== smoke test
+torch 2.11.0+cu128 cuda 12.8 gpu NVIDIA GeForce RTX 5070 Laptop GPU
+gsplat 1.5.3
+gsplat: CUDA extension has been set up successfully in 57.91 seconds.
+first call (includes JIT compile) s: 58.3
+render shape (1, 256, 256, 3) mean 0.14951202273368835
+backward ok, grad norm 4819.65185546875
+peak VRAM MB 3.1
+GSPLAT SMOKE TEST PASSED
+=== exit code 0
