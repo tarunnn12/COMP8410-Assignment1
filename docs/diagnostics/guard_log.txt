@@ -1,0 +1,3 @@
+﻿23:33:54 guard started, trip below 1 GB commit headroom
+23:36:44 TRIPPED: commit headroom 0.92 GB; stopped python jobs: 33948,37804,6172,37852,29936,33700
+23:49:05 guard started, trip below 1 GB commit headroom

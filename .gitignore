@@ -19,3 +19,12 @@ pairs/*/results/raw_media/
 # os
 Thumbs.db
 .DS_Store
+# third-party MiniWoB++ pages (rebuilt by the pair 4 notebook) and quick-run output
+pairs/p4_agents/data/miniwob_html_300s/
+demo_runs/
+# large files that are shared through the Drive folder named in the report (the notebooks can rebuild the photos)
+pairs/p6_lmm_vqa/data/images/
+pairs/p6_lmm_vqa/data_seed1/images/
+pairs/*/results/renders/
+# TensorBoard logs of the nerfstudio runs (their file names carry the machine name)
+events.out.tfevents*
