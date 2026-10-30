@@ -2,7 +2,7 @@
 
 Usage (from the repository root or from the unpacked Evaluation folder, CPU only, about 10 seconds):
     python tools/verify_report_numbers.py                       recompute and compare with the reported values
-    python tools/verify_report_numbers.py --report "49030000 Report.pdf"      also check that each reported phrase is in the report (.pdf or .docx)
+    python tools/verify_report_numbers.py --report "49030000 Report.pdf"      also check that each reported phrase is in the report (.pdf or .docx), that the figure and table numbers run without a gap and that every reference in the text has a caption
 
 Every row reads: id, what is checked, the recomputed value, the value printed in the report, PASS or FAIL.
 A recomputed value passes when it equals the reported value after rounding to the reported number of decimals.
@@ -100,18 +100,37 @@ def report_text(path):
     else:
         import docx
         d = docx.Document(str(path)); t = "\n".join(p.text for p in d.paragraphs) + "\n" + "\n".join(c.text for tb in d.tables for r in tb.rows for c in r.cells)
-    return re.sub(r"\s+", " ", t)
+    return t
+
+
+def check_references(raw):
+    """Captions run 1..N without a gap, every reference in the text points to a caption, and every figure and table is cited at least once."""
+    problems = 0
+    for kind in ("Figure", "Table"):
+        caps = [(m.start(1), int(m.group(2))) for m in re.finditer(rf"(?m)^[ \t]*({kind}) (\d+)\. ", raw)]
+        nums = [n for _, n in caps]
+        seq = nums == list(range(1, len(nums) + 1))
+        starts = {pos for pos, _ in caps}
+        cited = {int(m.group(1)) for m in re.finditer(rf"\b{kind} (\d+)\b", raw) if m.start() not in starts}
+        dangling = sorted(c for c in cited if c not in nums); never = sorted(n for n in nums if n not in cited)
+        print(f"{kind + 's':8} {len(nums)} captions, in order 1 to {len(nums)}: {'yes' if seq else 'NO ' + str(nums[:8])}; cited in the text but no caption: {dangling or 'none'}; never cited in the text: {never or 'none'}")
+        problems += (not seq) + len(dangling) + len(never)
+    return problems
 
 
 def main():
     ap = argparse.ArgumentParser(); ap.add_argument("--report"); a = ap.parse_args()
-    text = report_text(a.report) if a.report else None
+    raw = report_text(a.report) if a.report else None
+    text = re.sub(r"\s+", " ", raw) if raw else None
     bad = 0
     print(f"{'id':5} {'what':62} {'recomputed':>11} {'reported':>9}  value  " + ("phrase  " if text else "") + "source")
     for i, what, val, rep, dec, phrase, src in ROWS:
         ok = round(val, dec) == round(rep, dec); found = None if text is None else (re.sub(r"\s+", " ", phrase) in text)
         bad += (not ok) or (found is False)
         print(f"{i:5} {what[:62]:62} {val:11.{dec + 1}f} {rep:9.{dec}f}  {'PASS' if ok else 'FAIL':5}  " + ("" if found is None else f"{'found' if found else 'MISSING':8}") + src)
+    if raw:
+        print("\nfigure and table references:")
+        bad += check_references(raw)
     print(f"\n{len(ROWS)} numbers checked, {bad} problem(s)")
     sys.exit(1 if bad else 0)
 
