@@ -66,7 +66,7 @@ def size_mb(path):
 NOTE = """Slim package (what is not in this folder)
 
 This folder holds the code, notebooks, READMEs, executed notebooks, result tables (CSV, JSON, JSONL), figures and logs of the four pairs.
-To keep the upload small, these items were left out. They are in the shared Drive folder named in the report, and the notebooks can rebuild the data:
+To keep the upload small, these items were left out. They are in the shared OneDrive folder named in the report, and the notebooks can rebuild the data:
 - pairs/p6_lmm_vqa/data/images and data_seed1/images: the COCO and VQAv2 photos. python common/download_assets.py --only p6 downloads the source files; the notebook rebuilds the images and the manifest.
 - pairs/p2_3d_reconstruction/data/chair_orbit_low.mp4 and chair_orbit_high.mp4: my own phone videos of the chair (the input of src/prepare_chair_video.py).
 - renders/ folders of pair 2 (rendered test views); the side-by-side figures are kept in figures/.
